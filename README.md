@@ -27,5 +27,5 @@ python apld.py "https://www.aparat.com/playlist/954603" --quality 720
 
 
 # Courtesy to ...
-This code is a from from [aparatPlayListDownloader](https://github.com/ErfanPY/aparatPlayListDownloader) with just some modifications. 
+This code is a fork from [aparatPlayListDownloader](https://github.com/ErfanPY/aparatPlayListDownloader) with just some modifications. 
 

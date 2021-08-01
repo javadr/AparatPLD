@@ -13,7 +13,7 @@ def usage():
     """
 
 def main():
-    print("Please wait...")
+    print("Please wait ...")
     mainPage = req.get(link).content
     main_soup = bs(mainPage, 'html.parser')
     main_name = main_soup.find_all("div", attrs={"class":"content pl-sm"})
@@ -33,11 +33,12 @@ def main():
         soup = bs(html, 'html.parser')
         name = soup.find("h1", attrs={"id":"videoTitle", "class":"title"}).text.encode()
         qualitys = soup.find('div', attrs={'class':'dropdown-content'}).find_all('a')
-        for qual in qualitys :
+        for qual in qualitys:
             if quality in qual.get('aria-label'):
                 links[name] = qual.get('href')
-            elif "720" in qual.get('aria-label'):
-                links[name] = qual.get('href')
+                break
+        else:
+            links[name] = qual.get('href')
     print("Writing download list ...")
     
     with io.open('apd_output.sh', "w", encoding="utf-8") as file:

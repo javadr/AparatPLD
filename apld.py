@@ -28,7 +28,7 @@ def main():
     print(f"This playlist contains {count} videos")
     
     links = {}
-    for index,page in enumerate(track(video_pages, description="Downloading the video URLs ...")) :
+    for page in track(video_pages, description="Downloading the video URLs ..."):
         html = req.get(page).content
         soup = bs(html, 'html.parser')
         name = soup.find("h1", attrs={"id":"videoTitle", "class":"title"}).text.encode()
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Aparat Playlist Downloader(APD)", usage=usage())
     parser.add_argument("link", help="main page Link")
-    parser.add_argument("-q", "--quality", help="eg: [124, 360, 480, 720, 1080]", default='720')
+    parser.add_argument("-q", "--quality", help="eg: [144, 360, 480, 720, 1080]", default='720')
 
     args = parser.parse_args()
     link = args.link

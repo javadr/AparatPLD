@@ -2,4 +2,4 @@ rich
 request
 argparse
 bs4
-
+requests_html

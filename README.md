@@ -25,7 +25,8 @@ Run the script to download the materials by providing your desired Aparat play l
 python apld.py "https://www.aparat.com/playlist/954603" --quality 720
 ```
 
+Finally, the created executable `apd_output.sh` file uses `axel` to download the videos. 
 
 # Courtesy to ...
-This code is a fork from [aparatPlayListDownloader](https://github.com/ErfanPY/aparatPlayListDownloader) with just some modifications. 
+This code is inspired by [aparatPlayListDownloader](https://github.com/ErfanPY/aparatPlayListDownloader).
 

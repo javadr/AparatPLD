@@ -1,5 +1,5 @@
 rich
-request
 argparse
 bs4
+lxml_html_clean 
 requests_html

@@ -1,5 +1,5 @@
 # AparatPLD
-Aparat Play List Downloader
+Aparat Play List Downloader [*]
 
 # Introduction
 
